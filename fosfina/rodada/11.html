@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-16">
+    <meta name="viewport" content="width=device-width, initial-scale=0.70">
+
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X82N5KW6ZG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-X82N5KW6ZG');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3846451873944772"
+    crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Bootstarp Icon Font CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Google Font CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    
+    <title>FutChances - Rodada</title>
+    
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"
+        integrity="sha256-bC3LCZCwKeehY6T4fFi9VfOU0gztUa+S4cnkIhVPZ5E=" crossorigin="anonymous"></script>
+
+    <!-- Chart JS Plugin Data Labels-->
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0-rc.1/dist/chartjs-plugin-datalabels.min.js"
+        integrity="sha256-Oq8QGQ+hs3Sw1AeP0WhZB7nkjx6F1LxsX6dCAsyAiA4=" crossorigin="anonymous"></script>
+
+    <style>
+        a.svg-link {
+            position: relative;
+            display: inline-block;
+        }
+
+        a.svg-link:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark" aria-label="Navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <object data="/static/soccerball.svg" width="24" height="24"></object>&nbspFutChances
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSmall"
+                aria-controls="navbarSmall" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSmall">
+            
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="times" data-bs-toggle="dropdown" aria-expanded="false">Times</a>
+                        <ul class="dropdown-menu" aria-labelledby="times">
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/america-mg.html">
+                                    <object data="/static/america-mg.svg" width="18" height="18"></object>
+                                    América-MG
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/athletic.html">
+                                    <object data="/static/athletic.svg" width="18" height="18"></object>
+                                    Athletic
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/atletico-go.html">
+                                    <object data="/static/atletico-go.svg" width="18" height="18"></object>
+                                    Atlético-GO
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/avaí.html">
+                                    <object data="/static/avaí.svg" width="18" height="18"></object>
+                                    Avaí
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/botafogo-sp.html">
+                                    <object data="/static/botafogo-sp.svg" width="18" height="18"></object>
+                                    Botafogo-SP
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/crb.html">
+                                    <object data="/static/crb.svg" width="18" height="18"></object>
+                                    CRB
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/ceara.html">
+                                    <object data="/static/ceara.svg" width="18" height="18"></object>
+                                    Ceará
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/criciuma.html">
+                                    <object data="/static/criciuma.svg" width="18" height="18"></object>
+                                    Criciúma
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/cuiaba.html">
+                                    <object data="/static/cuiaba.svg" width="18" height="18"></object>
+                                    Cuiabá
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/fortaleza.html">
+                                    <object data="/static/fortaleza.svg" width="18" height="18"></object>
+                                    Fortaleza
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/goias.html">
+                                    <object data="/static/goias.svg" width="18" height="18"></object>
+                                    Goiás
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/juventude.html">
+                                    <object data="/static/juventude.svg" width="18" height="18"></object>
+                                    Juventude
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/londrina.html">
+                                    <object data="/static/londrina.svg" width="18" height="18"></object>
+                                    Londrina
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/novorizontino.html">
+                                    <object data="/static/novorizontino.svg" width="18" height="18"></object>
+                                    Novorizontino
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/nautico.html">
+                                    <object data="/static/nautico.svg" width="18" height="18"></object>
+                                    Náutico
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/operario.html">
+                                    <object data="/static/operario.svg" width="18" height="18"></object>
+                                    Operário
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/ponte-preta.html">
+                                    <object data="/static/ponte-preta.svg" width="18" height="18"></object>
+                                    Ponte Preta
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/sport.html">
+                                    <object data="/static/sport.svg" width="18" height="18"></object>
+                                    Sport
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/sao-bernardo.html">
+                                    <object data="/static/sao-bernardo.svg" width="18" height="18"></object>
+                                    São Bernardo
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/fosfina/time/vila-nova.html">
+                                    <object data="/static/vila-nova.svg" width="18" height="18"></object>
+                                    Vila Nova
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/fosfina/rodada/10.html">Resultados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/fosfina/classificacao.html">Classificação</a>
+                    </li>
+                </ul>
+                
+    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="competicoes" data-bs-toggle="dropdown" aria-expanded="false">
+                        
+                            Liga Fosfina 2026
+                        
+                        </a>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="competicoes">
+                        <li>
+                            <a class="dropdown-item" href="/fosfina.html">
+                                Liga Fosfina 2026
+                            </a>
+                        </li>
+                        </ul>
+                    </li>
+<!--                    <li class="nav-item"> -->
+<!--                        <a class="nav-link" href="/fosfina.html">Brasileirão</a> -->
+<!--                    </li> -->
+<!--                    <li class="nav-item"> -->
+<!--                        <a class="nav-link" href="/eliminatorias.html">Eliminatórias</a> -->
+<!--                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="padding-top: 90px; padding-bottom: 90px;">
+        <h1>
+<h1 class="pb-2 border-bottom">
+    <div class="row row-cols-3">
+            <div class="col" scope="col" style="text-align: center">
+                <a class="page-link" href="/fosfina/rodada/10.html" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </div>
+            <div class="col text-center link-dark text-decoration-none">Rodada: 11
+            </div>
+            <div class="col" scope="col" style="text-align: center">
+                <a class="page-link" href="/fosfina/rodada/12.html" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </div>
+    </div>
+</h1>
+
+<div class="container shadow-sm">
+    <div class="row">
+        <div class="container bg-light pt-2">
+            <table class="table table-sm table-hover">
+                <tbody>
+                    
+                    <tr>
+                        <td style="text-align: center;">03/09/2026</td>
+                        <td style="text-align: right;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/fortaleza.html"><object data="/static/fortaleza.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: left;"><a class="text-dark text-decoration-none" href="/fosfina/time/fortaleza.html">Fortaleza</a></td>
+                        
+                        <td class="table-success" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Fortaleza">73%</td>
+                        <td class="table-warning" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Empate">18%</td>
+                        <td class="table-danger" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Náutico">10%</td>
+                        <td style="text-align: right;"><a class="text-dark text-decoration-none" href="/fosfina/time/nautico.html">Náutico</a></td>
+                        <td style="text-align: left;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/nautico.html"><object data="/static/nautico.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: right;">
+                                <a class="text-dark text-decoration-none" href="/fosfina/jogo/101.html"><span class="material-icons">
+                                    zoom_in
+                                </span></a></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: center;">03/09/2026</td>
+                        <td style="text-align: right;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/operario.html"><object data="/static/operario.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: left;"><a class="text-dark text-decoration-none" href="/fosfina/time/operario.html">Operário</a></td>
+                        
+                        <td class="table-success" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Operário">52%</td>
+                        <td class="table-warning" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Empate">25%</td>
+                        <td class="table-danger" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Avaí">23%</td>
+                        <td style="text-align: right;"><a class="text-dark text-decoration-none" href="/fosfina/time/avaí.html">Avaí</a></td>
+                        <td style="text-align: left;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/avaí.html"><object data="/static/avaí.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: right;">
+                                <a class="text-dark text-decoration-none" href="/fosfina/jogo/102.html"><span class="material-icons">
+                                    zoom_in
+                                </span></a></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: center;">03/09/2026</td>
+                        <td style="text-align: right;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/cuiaba.html"><object data="/static/cuiaba.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: left;"><a class="text-dark text-decoration-none" href="/fosfina/time/cuiaba.html">Cuiabá</a></td>
+                        
+                        <td class="table-success" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Cuiabá">75%</td>
+                        <td class="table-warning" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Empate">17%</td>
+                        <td class="table-danger" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do América-MG">8%</td>
+                        <td style="text-align: right;"><a class="text-dark text-decoration-none" href="/fosfina/time/america-mg.html">América-MG</a></td>
+                        <td style="text-align: left;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/america-mg.html"><object data="/static/america-mg.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: right;">
+                                <a class="text-dark text-decoration-none" href="/fosfina/jogo/103.html"><span class="material-icons">
+                                    zoom_in
+                                </span></a></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: center;">03/09/2026</td>
+                        <td style="text-align: right;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/ceara.html"><object data="/static/ceara.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: left;"><a class="text-dark text-decoration-none" href="/fosfina/time/ceara.html">Ceará</a></td>
+                        
+                        <td class="table-success" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Ceará">71%</td>
+                        <td class="table-warning" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Empate">18%</td>
+                        <td class="table-danger" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Athletic">11%</td>
+                        <td style="text-align: right;"><a class="text-dark text-decoration-none" href="/fosfina/time/athletic.html">Athletic</a></td>
+                        <td style="text-align: left;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/athletic.html"><object data="/static/athletic.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: right;">
+                                <a class="text-dark text-decoration-none" href="/fosfina/jogo/104.html"><span class="material-icons">
+                                    zoom_in
+                                </span></a></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: center;">03/09/2026</td>
+                        <td style="text-align: right;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/atletico-go.html"><object data="/static/atletico-go.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: left;"><a class="text-dark text-decoration-none" href="/fosfina/time/atletico-go.html">Atlético-GO</a></td>
+                        
+                        <td class="table-success" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Atlético-GO">62%</td>
+                        <td class="table-warning" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Empate">21%</td>
+                        <td class="table-danger" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Botafogo-SP">18%</td>
+                        <td style="text-align: right;"><a class="text-dark text-decoration-none" href="/fosfina/time/botafogo-sp.html">Botafogo-SP</a></td>
+                        <td style="text-align: left;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/botafogo-sp.html"><object data="/static/botafogo-sp.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: right;">
+                                <a class="text-dark text-decoration-none" href="/fosfina/jogo/105.html"><span class="material-icons">
+                                    zoom_in
+                                </span></a></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: center;">03/09/2026</td>
+                        <td style="text-align: right;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/sao-bernardo.html"><object data="/static/sao-bernardo.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: left;"><a class="text-dark text-decoration-none" href="/fosfina/time/sao-bernardo.html">São Bernardo</a></td>
+                        
+                        <td class="table-success" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do São Bernardo">62%</td>
+                        <td class="table-warning" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Empate">19%</td>
+                        <td class="table-danger" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Goiás">19%</td>
+                        <td style="text-align: right;"><a class="text-dark text-decoration-none" href="/fosfina/time/goias.html">Goiás</a></td>
+                        <td style="text-align: left;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/goias.html"><object data="/static/goias.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: right;">
+                                <a class="text-dark text-decoration-none" href="/fosfina/jogo/106.html"><span class="material-icons">
+                                    zoom_in
+                                </span></a></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: center;">03/09/2026</td>
+                        <td style="text-align: right;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/crb.html"><object data="/static/crb.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: left;"><a class="text-dark text-decoration-none" href="/fosfina/time/crb.html">CRB</a></td>
+                        
+                        <td class="table-success" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do CRB">46%</td>
+                        <td class="table-danger" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Empate">25%</td>
+                        <td class="table-warning" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Juventude">29%</td>
+                        <td style="text-align: right;"><a class="text-dark text-decoration-none" href="/fosfina/time/juventude.html">Juventude</a></td>
+                        <td style="text-align: left;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/juventude.html"><object data="/static/juventude.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: right;">
+                                <a class="text-dark text-decoration-none" href="/fosfina/jogo/107.html"><span class="material-icons">
+                                    zoom_in
+                                </span></a></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: center;">03/09/2026</td>
+                        <td style="text-align: right;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/criciuma.html"><object data="/static/criciuma.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: left;"><a class="text-dark text-decoration-none" href="/fosfina/time/criciuma.html">Criciúma</a></td>
+                        
+                        <td class="table-success" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Criciúma">52%</td>
+                        <td class="table-warning" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Empate">24%</td>
+                        <td class="table-danger" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Novorizontino">24%</td>
+                        <td style="text-align: right;"><a class="text-dark text-decoration-none" href="/fosfina/time/novorizontino.html">Novorizontino</a></td>
+                        <td style="text-align: left;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/novorizontino.html"><object data="/static/novorizontino.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: right;">
+                                <a class="text-dark text-decoration-none" href="/fosfina/jogo/108.html"><span class="material-icons">
+                                    zoom_in
+                                </span></a></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: center;">03/09/2026</td>
+                        <td style="text-align: right;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/vila-nova.html"><object data="/static/vila-nova.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: left;"><a class="text-dark text-decoration-none" href="/fosfina/time/vila-nova.html">Vila Nova</a></td>
+                        
+                        <td class="table-warning" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Vila Nova">33%</td>
+                        <td class="table-danger" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Empate">24%</td>
+                        <td class="table-success" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Sport">43%</td>
+                        <td style="text-align: right;"><a class="text-dark text-decoration-none" href="/fosfina/time/sport.html">Sport</a></td>
+                        <td style="text-align: left;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/sport.html"><object data="/static/sport.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: right;">
+                                <a class="text-dark text-decoration-none" href="/fosfina/jogo/109.html"><span class="material-icons">
+                                    zoom_in
+                                </span></a></td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: center;">03/09/2026</td>
+                        <td style="text-align: right;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/ponte-preta.html"><object data="/static/ponte-preta.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: left;"><a class="text-dark text-decoration-none" href="/fosfina/time/ponte-preta.html">Ponte Preta</a></td>
+                        
+                        <td class="table-success" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Ponte Preta">39%</td>
+                        <td class="table-danger" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Empate">27%</td>
+                        <td class="table-warning" data-bs-toggle="tooltip" title="" style="text-align: center;" data-bs-original-title="Chance de Vitória do Londrina">34%</td>
+                        <td style="text-align: right;"><a class="text-dark text-decoration-none" href="/fosfina/time/londrina.html">Londrina</a></td>
+                        <td style="text-align: left;"><a class="svg-link link-dark text-decoration-none" href="/fosfina/time/londrina.html"><object data="/static/londrina.svg" width="18" height="18"></object></a></td>
+                        <td style="text-align: right;">
+                                <a class="text-dark text-decoration-none" href="/fosfina/jogo/110.html"><span class="material-icons">
+                                    zoom_in
+                                </span></a></td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</h1>
+    </div>
+    <footer class="footer mt-auto py-2 fixed-bottom bg-light">
+        <div class="container" style="text-align: center">
+            <span><small>FutChances: seu time, suas chances. Atualizado em 03/09/2026 18:32:34.</small></span>
+        </div>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+</body>
+
+</html>
